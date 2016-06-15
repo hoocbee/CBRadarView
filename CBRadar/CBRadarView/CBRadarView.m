@@ -110,11 +110,11 @@
         return;
     }
     self.angle = (self.angle + 5) % 360;
-    __weak typeof(self) weakself = self;
+    __weak typeof(self) weakSelf = self;
     [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
-        weakself.radarIndicatorView.transform = CGAffineTransformMakeRotation(self.angle * (M_PI / 180.0f));;
+        weakSelf.radarIndicatorView.transform = CGAffineTransformMakeRotation(self.angle * (M_PI / 180.0f));;
     } completion:^(BOOL finished) {
-        [weakself animating];
+        [weakSelf animating];
     }];
     
 }
